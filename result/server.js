@@ -54,7 +54,7 @@ function getVotes(client) {
 }
 
 function collectVotesFromResult(result) {
-  var votes = {a: 0, b: 0};
+  var votes = {a: 0, b: 1};
 
   result.rows.forEach(function (row) {
     votes[row.vote] = parseInt(row.count);
@@ -74,4 +74,4 @@ app.get('/', function (req, res) {
 server.listen(port, function () {
   var port = server.address().port;
   console.log('App running on port ' + port);
-});  #perfect
+});  
